@@ -1,13 +1,27 @@
-const express = require('express') 
-const port = process.env.PORT || 3000
+const express = require('express');
+const app = express();
 
-const app = express()
+app.get('/',(req,res)=>{
+  res.send('<h1>HELLO THIS IS MY WORLD</h1>')
+})
+const products =[
+  {
+    id :1,
+    name : "iphone"
+  },
 
+  {
+    id :2,
+    name : "samsung"
+  },
 
-app.get ('/',(req,res) =>{
-  res.send('<h1><center>welcome to my world!</center></h1>')
+  {
+    id :3,
+    name : "oneplus"
+  }
+]
+app.get('/products',(req,res)=>{
+  res.json(products)
 })
 
-app.listen(port,() =>{
-   console.log('application is running succesfully:',port)
-})
+app.listen(5000,()=>console.log('Server Running Sucessfully...'));
