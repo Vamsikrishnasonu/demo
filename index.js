@@ -5,7 +5,7 @@ const app = express()
 
 
 app.get ('/',(req,res) =>{
-  res.send('<h1>welcome to my world!</h1>')
+  res.send('<h1><center>welcome to my world!</center></h1>')
 })
 
 app.listen(port,() =>{
