@@ -1,28 +1,28 @@
-//importing dependencies
+
 const express = require("express")
 const app=express();
 var mongoose=require("mongoose");
 var bodyParser=require("body-parser");
 
-// Calling form.js from models
+
 var Form=require("./Models/form");
 
-// Connecting to database
+
 mongoose.connect("mongodb://localhost/form",{
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
 
-//middlewares
+
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 
-//rendering form.ejs
+
 app.get("/",function(req,res){
 	res.render("form");
 });
 
-// form submission
+
 app.get('/result',(req,res)=>{
 	res.render('result');
 });
