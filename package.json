@@ -1,10 +1,9 @@
 {
   "name": "demo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node App.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +16,11 @@
   },
   "homepage": "https://github.com/Vamsikrishnasonu/demo#readme",
   "dependencies": {
-    "express": "^4.18.2"
-  }
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.3"
+  },
+  "keywords": [],
+  "description": ""
 }
